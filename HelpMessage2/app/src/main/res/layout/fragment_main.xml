@@ -1,0 +1,189 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context="com.itonyb.helpmessage.fragments.MainFragment">
+
+
+    <Button
+        android:id="@+id/btn_help"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/btn_help_txt"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:text="@string/btn_exit_txt"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_help"
+        app:layout_constraintTop_toBottomOf="@+id/btn_help"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <Button
+        android:id="@+id/btn_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:text="@string/btn_list_txt"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_help"
+        app:layout_constraintTop_toBottomOf="@+id/btn_retry"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        />
+
+    <TextView
+        android:id="@+id/txtSsidView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_hostIP"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FF0000"
+        android:textSize="18.0dip"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/ssidLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"/>
+
+    <TextView
+        android:id="@+id/txtIpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_hostIP"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FF0000"
+        android:textSize="18.0dip"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/ipLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtSsidView"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"/>
+
+    <TextView
+        android:id="@+id/txtSignalView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_hostIP"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FF0000"
+        android:textSize="18.0dip"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/signalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtIpView"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"/>
+
+    <TextView
+        android:id="@+id/ssidLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SSID:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:textSize="18.0dip"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/parent"/>
+
+    <TextView
+        android:id="@+id/ipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:textSize="18.0dip"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/ssidLabel"/>
+
+    <TextView
+        android:id="@+id/signalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signal:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:textSize="18.0dip"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/ipLabel"/>
+
+    <Button
+        android:id="@+id/btn_retry"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_retry_txt"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_help"
+        app:layout_constraintTop_toBottomOf="@+id/btn_exit"
+        tools:layout_constraintRight_creator="1"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="226dp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtMessageStatusView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FF0000"
+                android:textSize="18.0dip"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
+
+
+</android.support.constraint.ConstraintLayout>

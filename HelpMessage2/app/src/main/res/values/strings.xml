@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">HelpMessage</string>
+    <string name="title">Search and Rescue</string>
+    <string name="btn_help_txt">Ask for help</string>
+    <string name="btn_exit_txt">Exit</string>
+    <string name="btn_retry_txt">Retry Scan</string>
+    <string name="btn_list_txt">List Wifi</string>
+    <string name="txt_hostIP"> </string>
+    <string name="txt_outOfRange">Sorry, RescueNet is out of range!</string>
+    <string name="txt_connectionSuccess">Connected to RescueNet! "\nPlease Send Message</string>
+    <string name="txt_tryAgain">Try Again</string>
+    <string name="txt_couldNotEnableWifi">Could not enable Wifi. Please open Wifi.</string>
+    <string name="txt_permissions_request">Please enable all permissions</string>
+    <string name="txt_connecting_dialog">Connecting to RescueNet...Please Wait</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
